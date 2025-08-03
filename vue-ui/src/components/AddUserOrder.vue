@@ -47,10 +47,10 @@ async function addUser() {
 
   const data = await res.json()
   if (res.ok) {
-    log.value = `✅ User added: ${JSON.stringify(data, null, 2)}`
+    log.value = `User added: ${JSON.stringify(data, null, 2)}`
     userId.value = data.user_id
   } else {
-    log.value = `❌ Error: ${JSON.stringify(data, null, 2)}`
+    log.value = `Error: ${JSON.stringify(data, null, 2)}`
   }
 }
 
@@ -69,9 +69,9 @@ async function addOrder() {
 
   const data = await res.json()
   if (res.ok) {
-    log.value = `✅ Order added: ${JSON.stringify(data, null, 2)}`
+    log.value = `Order added: ${JSON.stringify(data, null, 2)}`
   } else {
-    log.value = `❌ Error: ${JSON.stringify(data, null, 2)}`
+    log.value = `Error: ${JSON.stringify(data, null, 2)}`
   }
 }
 </script>
@@ -87,7 +87,7 @@ async function addOrder() {
 }
 .btn {
   padding: 0.5rem 1.25rem;
-  background-color: #2563eb;
+  background-color: black;
   color: white;
   border-radius: 0.375rem;
   border: none;

@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+
+# ! Lib's used: !
 # https://learn.javascript.ru/courses/vue
 # https://learn.javascript.ru
 
@@ -67,72 +69,3 @@ loop do
     puts "Invalid choice"
   end
 end
-
-# class Main
-#   def initialize(name)
-#     @name = name
-#   end
-#
-#   def circleArea(radius)
-#     puts "Your area with radius = #{radius} = #{Math::PI * (radius ** 2)}"
-#   end
-#
-#   def say_hi
-#     puts "Hello #{@name}!"
-#   end
-#
-#   def say_bye
-#     puts "Bye #{@name}!"
-#   end
-#
-#   def decToBin(x)
-#     31.downto(0) do |i|
-#       y = x >> i
-#       print((y&1))
-#     end
-#     puts
-#   end
-#
-#   def reverseStr(str)
-#     reversed = ''
-#     (str.length - 1).downto(0) do |i|
-#       reversed += str[i]
-#     end
-#     return reversed
-#   end
-#
-#   def isPalindrome(str)
-#     if str == reverseStr(str)
-#       puts "Is palindrome: #{reverseStr(str)} = #{str}"
-#     else
-#       puts "Is not palindrome: #{reverseStr(str)} != #{str}"
-#       end
-#   end
-#
-#   def inputMenu(x)
-#     case x
-#     when 1
-#       reverseStr("HellO!")
-#     when 2
-#       isPalindrome("HELLO!")
-#     when 3
-#       decToBin(183)
-#     when 4
-#       say_hi
-#     when 5
-#       say_bye
-#     when 6
-#       circleArea(10)
-#     end
-#   end
-# end
-#
-# puts "Enter your name:"
-# user = gets.chomp
-# sH = Main.new(user)
-# inp = 0
-# while (inp != -1)
-#   puts "Input your menu num (1-6):"
-#   inp = gets.chomp.to_i
-#   sH.inputMenu(inp)
-# end
