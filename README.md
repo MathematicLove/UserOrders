@@ -37,11 +37,3 @@ SELECT users.username, orders.order_name, orders.amount, orders.order_date
 FROM users
 LEFT JOIN orders ON users.user_id = orders.user_id;
 ```
-```txt
-           _                _                 _    
-          | |__  _   _     / \  _   _ _______| | __
-          | '_ \| | | |   / _ \| | | |_  / _ \ |/ /
-          | |_) | |_| |  / ___ \ |_| |/ /  __/   < 
-          |_.__/ \__, | /_/   \_\__, /___\___|_|\_\
-                 |___/          |___/       
-```
