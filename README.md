@@ -1,11 +1,11 @@
 # User&Orders
 Stack used: 
-- Ruby
-- Ruby on Rails
-- PostgreSQL 
-- Vue.js
-- Dockerfile 
-- CI for Rails with GitFlows (failed 😭)
+- Language for back: Ruby
+- Framework for API: Ruby on Rails
+- DB: PostgreSQL 
+- UI: Vue.js
+- DeployTools: Dockerfile 
+  - CI for Rails with GitFlows (failed 😭)
 
 ## To run $_{on  \space macOS}$:
 Starting server on localhost:3000 with Rails API: 
