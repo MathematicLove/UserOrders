@@ -15,7 +15,7 @@ Stack used:
 ## To run $_{on  \space macOS}$:
 Starting server on localhost:3000 with Rails API: 
 ```zsh
-cd user_order_api
+cd /path_to/user_order_api
 rails s 
 ```
 
