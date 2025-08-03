@@ -1,4 +1,4 @@
-# User&Orders
+# $User$ $\land$ $Orders$
 Stack used: 
 - Language for back:
   - Ruby
