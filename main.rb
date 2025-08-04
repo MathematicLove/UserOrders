@@ -34,7 +34,7 @@ def add_user(conn)
   user_id
 end
 
-def showTable(conn)
+def show_table(conn)
  result = conn.exec("SELECT users.username, orders.order_name, orders.amount, orders.order_date FROM users LEFT JOIN orders ON users.user_id = orders.user_id")
 
   puts "\nJoin results:"
@@ -81,7 +81,7 @@ loop do``
     else puts "First add user"
     end
   when '3'
-    showTable(conn)
+    show_table(conn)
   when '4'
     puts "Bye"
     break
