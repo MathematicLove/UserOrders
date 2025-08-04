@@ -34,6 +34,23 @@ def add_user(conn)
   user_id
 end
 
+def showTable(conn)
+ result = conn.exec("SELECT users.username, orders.order_name, orders.amount, orders.order_date FROM users LEFT JOIN orders ON users.user_id = orders.user_id")
+
+  puts "\nJoin results:"
+  puts "Username\tOrder Name"
+  puts "--------\t----------"
+
+  result.each do |row|
+    username = row['username']
+    order_name = row['order_name'] || 'NULL'
+    amount = row['amount'] || 'NULL'
+    order_date = row['order_date'] || 'NULL'
+    puts "#{username}\t#{order_name}\t#{amount}\t#{order_date}"
+  end
+  puts "\n"
+end
+
 def add_order(conn, user_id)
   puts "Add order: "
   print "Order name: "
@@ -49,10 +66,11 @@ def add_order(conn, user_id)
   puts "Order registered with id #{order_id}, order date #{order_date} for user #{user_id}"
 end
 
-loop do
+loop do``
   puts "1. Add user"
   puts "2. Add order"
-  puts "3. Exit"
+  puts "3. Show users and orders"
+  puts "4. Exit"
   choice = gets.chomp
   case choice
   when '1'
@@ -63,6 +81,8 @@ loop do
     else puts "First add user"
     end
   when '3'
+    showTable(conn)
+  when '4'
     puts "Bye"
     break
   else
